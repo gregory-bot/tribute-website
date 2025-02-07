@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.quote-image {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    margin: 0 auto 20px;
+    border-radius: 10px 10px 0 0;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.quote-image.active {
+    opacity: 1;
+    position: relative; 
+}
+.circle span {
+    width: 25px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.circle.active {
+    transform: rotate(180deg);
+}
+.side-menu {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #ffeb3b;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.side-menu.active {
+    left: 0;
+}
+.menu-header {
+    margin-bottom: 3rem;
+}
+.menu-header .logo {
+    font-size: 2rem;
+    color: #333;
+}
+
+.side-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.side-menu a:hover {
+    color: #ff4d4d;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hero-video.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+}
+
+#typewriter {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    min-height: 3rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #ff3333;
+}
+.timeline-section {
+    padding: 6rem 2rem;
+    background: #f8f8f8;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #ff4d4d;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    top: 0;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -11px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -11px;
+}
+
+.timeline-item h3 {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    color: #666;
+    line-height: 1.6;
+}
+.quotes-section {
+    padding: 6rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+.quotes-section h2 {
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.rating {
+    margin-bottom: 1rem;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.active {
+    color: #ffd700;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.legacy-section {
+    padding: 6rem 2rem;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.legacy-section h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.legacy-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+        left: -10px !important;
+    }
+
+    .quotes-section,
+    .legacy-section {
+        padding-bottom: 2rem;
+    }
+}

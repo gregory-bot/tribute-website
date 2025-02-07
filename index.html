@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tribute</title>
+        <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.d2ff9bb724c284c5e64ada85e659ceb7?rik=dsMFA38J6D4wTw&riu=http%3a%2f%2f2.bp.blogspot.com%2f_-99_YzOWAq4%2fTVKeMKWJ3jI%2fAAAAAAAAAJg%2f6Ph2S4PIGbY%2fs1600%2fnelson_mandela.jpg&ehk=Lps6fsYxPtYL0S76yEQ1V6qd9%2b%2bU69EaXO2S%2b1FqMBQ%3d&risl=&pid=ImgRaw&r=0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <nav class="desktop-nav">
+            <div class="logo" style="font-family: 'Courier New', monospace;">tribute</div>
+            <div class="hamburger">
+                <div class="circle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">home</a></li>
+                <li><a href="#timeline">life timeline</a></li>
+                <li><a href="#quotes">quote</a></li>
+                <li><a href="#legacy">legacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="side-menu">
+        <div class="menu-header">
+            <div class="logo" style="font-family: 'Courier New', monospace;">tribute</div>
+        </div>
+        <nav>
+            <a href="#home">home</a>
+            <a href="#timeline">life timeline</a>
+            <a href="#quotes">quote</a>
+            <a href="#legacy">legacy</a>
+        </nav>
+    </div>
+
+    <div class="overlay"></div>
+
+    <section id="home" class="hero">
+        <div class="video-slider">
+            <video class="hero-video active" autoplay loop muted playsinline>
+                <source src="https://videos.pexels.com/video-files/7687599/7687599-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="https://videos.pexels.com/video-files/3831769/3831769-uhd_2732_1440_25fps.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="https://videos.pexels.com/video-files/7687596/uhd_30fps.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <div id="typewriter" style="font-family: 'Courier New', monospace;"></div>
+            <button class="cta-button">view life timeline</button>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <h2>life timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>1918</h3>
+                <p>Born in Mvezo, South Africa</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1944</h3>
+                <p>Joined the African National Congress</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1964</h3>
+                <p>Sentenced to life imprisonment</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1990</h3>
+                <p>Released from prison</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotes" class="quotes-section">
+        <div class="carousel">
+            <img src="https://wallsdesk.com/wp-content/uploads/2016/12/Nelson-Mandela-HD-Background-.jpg" alt="Inspirational Image 1" class="quote-image active">
+            <img src="https://iconicimages.net/app/uploads/2017/01/BGO119-400x600.jpg" alt="Inspirational Image 2" class="quote-image">
+            <img src="https://th.bing.com/th/id/R.024920854abf9ef94fc0595fd622090d?rik=teZdhT%2bfN%2fXuaA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-wpzsl2l4Wfc%2fTbkPBLrgeMI%2fAAAAAAAAAAw%2fnvAP65K655k%2fs1600%2fmandela-415x479.jpg&ehk=OPLXvpougjXbqkOWTEKCkJOJj75UgN6rzx7yU4UueUA%3d&risl=&pid=ImgRaw&r=0" alt="Inspirational Image 3" class="quote-image">
+        </div>
+        <h2>inspirational Quotes</h2>
+        <div class="quote-container">
+            <p id="quote-text"></p>
+            <div class="rating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+            </div>
+            <p class="rating-text">rate this quote</p>
+        </div>
+    </section>
+    <section id="legacy" class="legacy-section">
+        <h2>Legacy</h2>
+        <p>A legacy of peace, justice, and equality that continues to inspire generations.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 tribute. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
